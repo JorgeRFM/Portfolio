@@ -1,0 +1,252 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: linear-gradient(90deg, #1a5276, #117864);
+    background-size: 200% 100%;
+    animation: moveBackground 10s linear infinite;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Adjust the font size for smaller screens */
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 0.8em; /* Adjust the font size for smaller screens */
+}
+main {
+    padding-top: 100px; /* Adjust the value based on your header height */
+    margin-bottom: 100px; /* Adjust based on your footer height */
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: grid;
+    grid-gap: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.social-links {
+    position: fixed;
+    bottom: 57px;
+    right: 20px;
+    z-index: 3;
+    
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #007BFF;
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em 0; /* Reduce padding for smaller screens */
+    }
+    header h1 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    header p {
+        font-size: 0.7em; /* Adjust font size for smaller screens */
+    }
+
+    nav {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .project img {
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+body:not(.reveal-footer) footer {
+    display: none;
+    z-index: 2; /* Ensure the footer is behind other elements */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#contact {
+    margin-bottom: 55px; /* Adjust based on your specific requirements for the contact section */
+}
+
